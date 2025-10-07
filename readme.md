@@ -216,10 +216,9 @@ In HTML, there's a distinction between how tags are used depending on whether th
 -   **```<td>:```** Defines a table data cell. Used for regular table content.
 -   **```<th>:```** Defines a table header cell. Typically used for column labels and styled differently (often bold and centered).
 
-# FORM
+# FORM in HTML
 
 **Form:** HTML forms are used to collect user input. They are defined using the < form> tag.
-
 -   **Tag:**
     -   **Form tag:** Forms are created using the < form> element, which acts as a container for various form elements.
     -   **Label tag:** The **```<label>``` tag** defines a label for an ```<input>```, ```<select>```, ```<textarea>```, or ```<button>``` element. It improves accessibility by providing a clickable area that focuses its associated form element when clicked.
@@ -255,4 +254,4 @@ In HTML, there's a distinction between how tags are used depending on whether th
 
 **Q2.** Create a form - contain Name, email, password, DOB.
 
-**Q3.** creaet a profile using HTML, profile contain student Name, Education, DOB, Address and P-size Photo. detail about your education in detail, address in detail, hobby, interesst, skill, technology you know, project you completed in school and college.
+**Q3.** create  a profile using HTML, profile contain student Name, Education, DOB, Address and P-size Photo. detail about your education in detail, address in detail, hobby, interesst, skill, technology you know, project you completed in school and college.
