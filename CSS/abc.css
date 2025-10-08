@@ -1,0 +1,59 @@
+/* universal Selector */
+/* * {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+} */
+
+/* tag Selector */
+h1{
+    color: cyan;
+}
+
+/* h1, h2, p{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+/* class Selector */
+
+/* .master{
+    font-size: 30px;
+    color: red;
+    border: 1px solid black;
+
+} */
+
+/* #aagenaa{
+    display: block;
+    color: blue;
+} */
+
+/* mark{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(235, 248, 51);
+    line-height: -10px;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: red;
+} */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.demo{
+    box-sizing: content-box;
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    margin: 15px 20px 25px 30px;
+    padding: 20px 30px 40px 50px;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: -5px -5px 10px red;
+    box-shadow: 150px 15px 10px red;
+}

@@ -255,3 +255,193 @@ In HTML, there's a distinction between how tags are used depending on whether th
 **Q2.** Create a form - contain Name, email, password, DOB.
 
 **Q3.** create  a profile using HTML, profile contain student Name, Education, DOB, Address and P-size Photo. detail about your education in detail, address in detail, hobby, interesst, skill, technology you know, project you completed in school and college.
+
+
+## CSS - Cascading Style Sheet - 8th Oct
+
+**CSS:** Which stands for Cascading Style Sheets, is a crucial language for web development. It defines how HTML elements are presented on a screen, in print, or on other media.
+
+### Three way to style HTML Elements
+
+**1. inline CSS:** Inline CSS involves embedding styles directly within the HTML element tags using the style attribute. While convenient for quick modifications, it can clutter your HTML code and make it difficult to maintain for larger projects.
+
+**2. internal CSS:** Internal CSS styles are defined within the < head> section of your HTML document using the < style> tag. This approach offers more organization than inline CSS and keeps your styles within the HTML file.
+
+**3. external CSS:** External CSS is the preferred method for larger websites. Styles are written in a separate CSS file (.css extension) and linked to your HTML documents using the < link> tag within the < head> section. This promotes code reusability and easier maintenance, as you can update the styles in one central location and have them reflected across all linked webpages.
+
+```
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+P - Inline > Internal > External
+
+## CSS Selector
+
+**1. Universal Selector (*):**
+
+-   **Definition:** The universal selector matches any element type and is often used as a base style for all elements in a document.
+-   **Syntax:** Simply use an asterisk (*) as the selector.
+-   **Points:**
+    -   The universal selector applies styles to all elements in the document unless overridden by more specific selectors.
+    -   It's commonly used to reset default browser styles or to set consistent default styles across all elements.
+-   **Example:**
+    ```
+    .class_name {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ```
+    **2. group Selector:**
+-   **Definition:** Group selectors allow you to apply the same styles to multiple selectors in a single declaration.
+-   **Syntax:** Simply separate the selectors with commas.
+-   **Points:**
+    -   Group selectors help reduce redundancy in CSS code by combining multiple selectors that share the same styles.
+    -   They improve code readability and maintainability by grouping related selectors together.
+-   **Example:**
+    ```
+      h1, h2, h3{
+        font-family: Arial, sans-serif;
+      }
+    ```
+
+**3. Tag selector:**
+
+-   **Definition:** Tag selectors target HTML elements based on their tag names.
+-   **Syntax:** Simply use the tag name as the selector.
+-   **Points:**
+    -   Tag selectors apply styles to all elements of a particular tag type throughout the document.
+    -   They are less specific than class or ID selectors and can be useful for applying broad styles to elements like paragraphs, headings, etc.
+    -   Tag selectors can be combined with other selectors to make them more specific.
+-   **Example:**
+    ```
+      p{
+        font-size: 3em;
+        border: 1px solid black;
+      }
+    ```
+    **4. ID Selector: (#id_Name)**
+-   **Definition:** ID selectors target HTML elements based on their unique ID attribute. IDs should be unique within a document, and each element should have only one ID.
+-   **Syntax:** To select elements by ID, use a hash (#) followed by the ID name: #idname.
+-   **Points:**
+    -   IDs have higher specificity compared to classes, meaning they override class styles.
+    -   IDs should be unique within a document, as using the same ID for multiple elements can lead to unexpected behavior.
+    -   Unlike classes, IDs should generally be used sparingly, typically for elements that are unique and not repeated.
+-   **Example:**
+    ```
+      #header{
+        font-size: 24px;
+      }
+    ```
+    **5. Class Selector: (.class_Name)**
+-   **Definition:** Class selectors target HTML elements based on their class attribute. The class attribute can be applied to multiple elements, allowing you to style multiple elements with a single class.
+-   **Syntax:** To select elements by class, use a period **(.)** followed by the class name: **.classname**.
+-   **Points:**
+    -   Classes are reusable and can be applied to multiple elements throughout a document.
+    -   You can apply multiple classes to a single element by separating them with spaces in the HTML attribute.
+    -   Class selectors have lower specificity compared to ID selectors, meaning they are overridden by IDs.
+-   **Example:**
+    -   ```
+        .button{
+          color: blue;
+          font-size: 2em;
+        }
+        ```
+
+**Q1. Heading with h3 and color is green and font size id 100px; (use class, A to M, ID N - Z)**
+
+### Font Properties in CSS
+| **Property**      | **Definition**   | **Example**  |
+| ----------------- | ---------------- | -------------|
+| `font-family`     | Specifies the font type for text. Can list multiple fonts as fallback.| `font-family: Arial, sans-serif;`|
+| `font-size`       | Defines the size of the text.   | `font-size: 16px;` |
+| `font-style`      | Defines the text style — normal, italic, or oblique. | `font-style: italic;` |
+| `font-weight`     | Sets the thickness (boldness) of the text. | `font-weight: bold;` or `font-weight: 700;` |
+| `font-variant`    | Displays text in small-caps (uppercase letters in smaller size).  | `font-variant: small-caps;`  |
+| `font-stretch`    | Makes text wider or narrower. | `font-stretch: expanded;` |
+| `font`            | Shorthand property to set font-style, font-variant, font-weight, font-size, line-height, and font-family in one line. | `font: italic bold 16px/1.5 Arial, sans-serif;` |
+| `line-height`     | Controls the space between lines of text. | `line-height: 1.5;`   |
+| `letter-spacing`  | Adjusts the space between letters. | `letter-spacing: 2px;` |
+| `word-spacing`    | Adjusts the space between words.  | `word-spacing: 5px;`  |
+| `text-transform`  | Controls capitalization of text.  | `text-transform: uppercase;`  |
+| `text-decoration` | Adds decoration like underline, overline, or line-through. | `text-decoration: underline;` |
+| `text-align`      | Aligns text horizontally.| `text-align: center;` |
+| `text-shadow`     | Adds shadow effects to text. | `text-shadow: 2px 2px 4px gray;` |
+
+### Background Properties in CSS
+| **Property**            | **Definition**     | **Example**     |
+| ----------------------- | ------------------------------------------| --------------------------------------------------- |
+| `background-color`      | Sets the background color of an element.     | `background-color: lightblue;`   |
+| `background-image`      | Sets a background image for an element.  | `background-image: url('bg.jpg');`   |
+| `background-repeat`     | Controls if/how the background image repeats. | `background-repeat: no-repeat;`   |
+| `background-position`   | Defines the starting position of the background image.  | `background-position: center top;`                  |
+| `background-size`       | Defines the size of the background image.     | `background-size: cover;`                           |
+| `background-attachment` | Defines whether the background scrolls or stays fixed. | `background-attachment: fixed;`                     |
+| `background-origin`     | Defines the area within which the background image is painted (border-box, padding-box, content-box). | `background-origin: content-box;` |
+| `background-clip`       | Determines how far the background extends (border-box, padding-box, content-box). | `background-clip: padding-box;`                     |
+| `background-blend-mode` | Blends the background image with the background color. | `background-blend-mode: multiply;`                  |
+| `background`            | Shorthand for all background properties in one line.   | `background: url('bg.jpg') no-repeat center/cover;` |
+
+
+
+### Box-Model
+
+The CSS box model is a fundamental concept in web design that defines how elements are structured and positioned on a web page. It's essentially a mental model that browsers use to render HTML elements on the screen. Understanding this model is crucial for building well-structured and visually appealing websites.
+
+1. **Content:** This is the core area where your element's actual content resides. It can be text, images, videos, or any other web content. You can control the size of this area using the width and height properties in CSS.
+2. **Padding:** Padding creates a transparent inner layer around the content. It adds space between the content and the border of the element. Padding is defined using the padding property, which accepts values for all four sides (top, right, bottom, left) or horizontally and vertically.
+    - Padding can be set using properties like **padding-top,** **padding-right,** **padding-bottom,** and **padding-left**.
+3. **Border:** The border surrounds the content and padding, providing a visual separation from other elements on the page. You can control the style (solid, dashed, dotted), color, and thickness of the border using properties like border-style, border-color, and border-width.
+    - You can set border properties using **border-width**, **border-style**, and **border-color**.
+4. **Margin:** Margin creates a transparent outer layer around the entire box (content, padding, and border). It adds space between the element and its neighboring elements. Margins are defined using the margin property, similar to padding.
+    - Margin properties include **margin-top**, **margin-right**, **margin-bottom**, and **margin-left**.
+
+**Benefits of the Box Model:**
+
+-   **Precise control over element layout:** The box model allows you to define clear separations between elements using margins and padding.
+-   **Responsive design:** By understanding how box model properties interact, you can create layouts that adapt to different screen sizes.
+-   **Consistent visual appearance:** The box model ensures a consistent way for browsers to render elements across different platforms.
+
+**Q. calculate height and width of card, in box-sizing border box, height is 300px, width is 350px, border, margin and padding is 20px each.**
+
+# Box-Shadow and Text-Shadow in CSS
+
+**1. Text Shadow:** The text-shadow property adds shadow to the text of an element. It creates a shadow effect behind the text to make it stand out or give it a more visually appealing appearance.
+
+-   **CSS Property:**
+
+`text-shadow: [horizontal offset] [vertical offset] [blur radius] [color];`
+
+-   **Horizontal Offset:** It specifies the horizontal distance of the shadow from the text. A positive value moves the shadow to the right, while a negative value moves it to the left.
+-   **Vertical Offset:** It specifies the vertical distance of the shadow from the text. A positive value moves the shadow downwards, while a negative value moves it upwards.
+-   **Extra :**
+    -   **Offset:** Defines how far the shadow is positioned horizontally (x-axis) and vertically (y-axis) from the text. Values can be positive, negative lengths (px, em, rem), or percentages.
+-   **Blur Radius:** It specifies the amount of blur applied to the shadow. A higher value creates a more blurred shadow effect.
+-   **Color:** It specifies the color of the shadow. You can use color names, hexadecimal, RGB, RGBA, HSL, or HSLA values to define the color.
+-   **Example:**
+
+```
+h1 {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+```
+
+**2. Box-Shadow:** The box-shadow property adds shadow effects to an element's box (such as a < div>). It creates a shadow behind the box, giving it depth and dimensionality.
+
+**CSS Property:**
+
+```
+box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color] [inset];
+```
+
+-   **Horizontal Offset:** It specifies the horizontal distance of the shadow from the box. Positive values move the shadow to the right, and negative values move it to the left.
+-   **Vertical Offset:** It specifies the vertical distance of the shadow from the box. Positive values move the shadow downwards, and negative values move it upwards.
+-   **Blur Radius:** It specifies the amount of blur applied to the shadow. Higher values create a more blurred shadow effect.
+-   **Spread Radius:** It specifies the spread of the shadow. Positive values expand the shadow, while negative values shrink it. This property is optional.
+-   **Color:** It specifies the color of the shadow, using the same color value formats as text-shadow.
+
+```
+box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
+```
