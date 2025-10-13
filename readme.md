@@ -445,3 +445,65 @@ box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] 
 ```
 box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
 ```
+
+# CSS Position
+
+The **position** property in CSS governs how an HTML element is positioned within a document's layout. It offers five distinct values that control the element's placement relative to its usual flow in the document or the viewport (the visible area of the browser window).
+**1. Static - (Default):**
+-   Elements with **position: static** (the default) occupy their standard position in the document's flow, meaning they're laid out one after another in the order they appear in the HTML code.
+-   The **top**, **right**, **bottom**, and **left** properties have no effect on statically positioned elements.
+-   ```
+.absolute-element {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}```
+
+**2. Absolute**
+    - Elements with position: absolute are removed from the document's flow and positioned relative to their nearest containing block (often the parent element or a block-level element like a < div>).
+    - The top, right, bottom, and left properties are used to specify the absolute position of the element within its containing block.
+    - Absolutely positioned elements create gaps in the document's flow where they would have been without absolute positioning.
+  - ```
+    .absolute-element {
+      position: absolute;
+      top: 50px;
+      right: 0;
+    } ```
+
+**3. Relative**
+   - Elements with position: relative remain in the document's flow but can be shifted relative to their original position using the top, right, bottom, and left properties.
+   - These offset values are applied relative to the element's original position, not the viewport or any containing element.
+   - Elements retain their place in the normal flow but can be offset using top, bottom, left, and right properties.
+   - Offsets are relative to the element's original position in the flow.
+   ```
+   .relative-element {
+        position: relative;
+        top: 50px; 
+        left: 20px;  
+} 
+```
+
+**4. Sticky**
+    - Combines aspects of relative and fixed.
+    - Behaves like relative until it reaches a specific scroll position.
+    - Then "sticks" to the viewport like fixed.
+    - Useful for headers that stay visible until a certain point.
+    ```
+    .sticky-element {
+        position: sticky;
+        top: 5px; 
+        left: 0;  
+} 
+```
+
+**5. Fixed**
+    - The element is removed from the normal document flow and positioned relative to the viewport. It stays in the same position even if the page is scrolled.
+    - Positioned relative to the viewport and remains fixed even when scrolling.
+    - Useful for navigation bars or sidebars that stay visible.
+    - Uses top, right, bottom, and left properties for positioning.
+    ```
+    .fixed-element {
+        position: fixed;
+        top: 0;   
+        left: 0;
+}
