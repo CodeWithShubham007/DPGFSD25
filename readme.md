@@ -446,41 +446,49 @@ box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] 
 box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
 ```
 
+## Day 15th Oct 2025
+
 # CSS Position
 
 The **position** property in CSS governs how an HTML element is positioned within a document's layout. It offers five distinct values that control the element's placement relative to its usual flow in the document or the viewport (the visible area of the browser window).
+
 **1. Static - (Default):**
 -   Elements with **position: static** (the default) occupy their standard position in the document's flow, meaning they're laid out one after another in the order they appear in the HTML code.
 -   The **top**, **right**, **bottom**, and **left** properties have no effect on statically positioned elements.
--   ```
-.absolute-element {
-  position: absolute;
-  top: 50px;
-  right: 0;
-}```
+
+```
+    .static-element {
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
+```
 
 **2. Absolute**
     - Elements with position: absolute are removed from the document's flow and positioned relative to their nearest containing block (often the parent element or a block-level element like a < div>).
     - The top, right, bottom, and left properties are used to specify the absolute position of the element within its containing block.
     - Absolutely positioned elements create gaps in the document's flow where they would have been without absolute positioning.
-  - ```
+
+```
     .absolute-element {
       position: absolute;
       top: 50px;
       right: 0;
-    } ```
+    } 
+```
 
 **3. Relative**
    - Elements with position: relative remain in the document's flow but can be shifted relative to their original position using the top, right, bottom, and left properties.
    - These offset values are applied relative to the element's original position, not the viewport or any containing element.
    - Elements retain their place in the normal flow but can be offset using top, bottom, left, and right properties.
    - Offsets are relative to the element's original position in the flow.
-   ```
-   .relative-element {
+  
+```
+    .relative-element {
         position: relative;
         top: 50px; 
         left: 20px;  
-} 
+    } 
 ```
 
 **4. Sticky**
@@ -488,12 +496,13 @@ The **position** property in CSS governs how an HTML element is positioned withi
     - Behaves like relative until it reaches a specific scroll position.
     - Then "sticks" to the viewport like fixed.
     - Useful for headers that stay visible until a certain point.
-    ```
+
+```
     .sticky-element {
         position: sticky;
         top: 5px; 
         left: 0;  
-} 
+    } 
 ```
 
 **5. Fixed**
@@ -501,9 +510,173 @@ The **position** property in CSS governs how an HTML element is positioned withi
     - Positioned relative to the viewport and remains fixed even when scrolling.
     - Useful for navigation bars or sidebars that stay visible.
     - Uses top, right, bottom, and left properties for positioning.
-    ```
+```
     .fixed-element {
         position: fixed;
         top: 0;   
         left: 0;
-}
+    }
+```
+
+
+
+### Ways to Add Color in CSS
+**There are six main ways to specify colors in CSS:**
+
+**1. Named Colors**
+    Use predefined color names like red, blue, green, etc.
+
+```
+    .color-name {
+        color: blue;
+    }
+```
+
+**2. HEX Code**
+A 6-digit or 3-digit hexadecimal value defining RGB colors.
+```
+    .hex-color {
+        color: #ff0000; /* red */
+    }
+```
+
+**3. RGB(Red, Green, Blue)**
+Defines color using RGB values (0–255).
+```
+    .rgb-color {
+        color: rgb(255, 0, 0); /* red */
+    }
+```
+
+**4. RGBA (RGB + Alpha)**
+Adds transparency using the alpha value (0 = transparent, 1 = opaque).
+```
+    .rgba-color {
+        color: rgba(255, 0, 0, 0.5); /* semi-transparent red */
+    }
+```
+
+**5. HSL (Hue, Saturation, Lightness)**
+Defines color in terms of hue (color wheel), saturation (%), and lightness (%).
+```
+    .hsl-color {
+        color: hsl(0, 100%, 50%); /* pure red */
+    }
+```
+
+**6. HSLA (HSL + Alpha)**
+Adds transparency to HSL colors.
+```
+    .hsla-color {
+        color: hsla(0, 100%, 50%, 0.5); /* semi-transparent red */
+    }
+```
+
+### CSS Gradients
+A gradient is a smooth transition between two or more colors. CSS supports two main types of gradients: Linear and Radial, along with Conic gradients (CSS3 feature).
+
+**1. Linear Gradient**
+    Creates a gradient that transitions colors along a straight line (horizontal, vertical, or diagonal).
+    Defined using the linear-gradient() function.
+    You can specify direction (to right, to bottom, 45deg, etc.) and multiple color stops.
+```
+    .linear-gradient {
+        background: linear-gradient(to right, red, yellow);
+    }
+```
+
+  **Key Points:**
+- Default direction is top to bottom.
+- You can use multiple colors.
+- Can include angles like linear-gradient(45deg, blue, pink).
+
+**2. Radial Gradient**
+    Creates a circular or elliptical color transition from the center outward.
+    Defined using radial-gradient() function.
+    Colors spread from a central point outward to the edges.
+```
+    .radial-gradient {
+        background: radial-gradient(circle, red, yellow, green);
+    }
+```
+
+   **Key Points:**
+- Shape can be circle or ellipse.
+- You can specify the position (e.g., at center, at top right).
+- Multiple color stops are supported.
+
+**3. Conic Gradient (CSS3)**
+    Creates a gradient that rotates around a center point (like a pie chart).
+    Defined using conic-gradient().
+```
+    .conic-gradient {
+        background: conic-gradient(from 90deg, red, yellow, green);
+    }
+```
+
+   **Key Points:**
+- Gradients rotate around the center.
+- Great for pie charts, color wheels, and circular patterns.
+- You can control the starting angle with from <angle>.
+
+**4. Repeating Gradients**
+    You can repeat gradients for striped or patterned effects using:
+```
+    repeating-linear-gradient(),
+    repeating-radial-gradient(),
+    repeating-conic-gradient(),
+
+
+    .repeating-gradient {
+        background: repeating-linear-gradient(45deg, red, yellow 10%, red 20%);
+    }
+```
+
+### CSS Display Flex
+The display: flex property in CSS is used to create a flex container that enables a flexible and responsive layout structure.
+It provides powerful alignment and spacing capabilities without using floats or positioning.
+
+When you set `display: flex` on a container, all its direct child elements become flex items.
+
+**1. display: flex — Definition:**
+- Defines a flex container that arranges its children (flex items) along a main axis (horizontal by default) and a cross axis (vertical).
+- The main goal of Flexbox is to provide a more efficient way to align and distribute space among items, even when their size is unknown or dynamic.
+```
+    .container {
+        display: flex;
+    }
+```
+**Key Features:**
+- Align items vertically and horizontally easily.
+- Supports wrapping of items.
+- Provides equal space distribution between items.
+- Great for responsive layouts.
+
+**A. justify-content:** Defines how flex items are aligned along the main axis (horizontal by default).
+```
+    .container {
+        justify-content: space-between;
+    }
+```
+
+**Possible values:**
+- **flex-start** → items align to the start of the main axis (default)
+- **flex-end** → items align to the end
+- **center** → items align to the center
+- **space-between** → equal space between items
+- **space-around** → equal space around items
+- **space-evenly** → equal spacing on all sides
+
+**B. align-items:** Defines how items are aligned along the cross axis (vertical by default).
+```
+    .container {
+        align-items: center;
+    }
+```
+
+**Possible values:**
+- **stretch** → items stretch to fill container (default)
+- **flex-start** → items align to the start of cross axis.
+- **flex-end** → items align to the end.
+- **center** → items align to the center
+- **baseline** → items align according to their text baselines.

@@ -1,0 +1,7 @@
+.demo{
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+    background-image: linear-gradient(135deg, red, green, blue);
+    display: flex;
+}
