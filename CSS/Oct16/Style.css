@@ -1,0 +1,51 @@
+/* h1{
+    color: red;
+    background-color: cyan;
+} */
+
+/* body{ */
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* background-color: pink; */
+    /* background-image: url('https://cdn.pixabay.com/photo/2022/09/27/19/46/ai-generated-7483596_960_720.jpg'); */
+    /* background-image: linear-gradient(-135deg, red, green, blue); */
+    /* background-image: radial-gradient(at right, red, blue); */
+    /* background-image: conic-gradient(from 90deg, red, blue) ; */
+/* } */
+
+/* Portfolio Header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header{
+    width: 100%;
+    height: 5em;
+    /* border: 1px solid black; */
+    background-color: #d0c9c9;
+    box-shadow: 5px 5px 5px gray;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header .sec-1 img{
+    width: 100px;
+    height: auto;
+}
+
+.sec-2 ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+
+}
+
+.header .sec-2 ul li a{
+    color: black;
+    text-decoration: none;
+}

@@ -84,3 +84,17 @@
     right: 0;
     background-color: pink;
 } */
+
+
+/* Border */
+/* body{
+    border-width: 10px;
+    border-style:dotted ;
+    border-color: black;
+    border: 10px double red;
+    border: 10px double #ff0000;
+    border: 10px double rgb(255, 0, 0);
+    border: 10px double rgba(255, 0, 0, 0.1);
+    border: 10px double #ff000099;
+} */
+ 

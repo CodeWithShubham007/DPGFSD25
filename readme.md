@@ -571,6 +571,7 @@ Adds transparency to HSL colors.
         color: hsla(0, 100%, 50%, 0.5); /* semi-transparent red */
     }
 ```
+## Day 16th Oct 2025
 
 ### CSS Gradients
 A gradient is a smooth transition between two or more colors. CSS supports two main types of gradients: Linear and Radial, along with Conic gradients (CSS3 feature).
@@ -680,3 +681,5 @@ When you set `display: flex` on a container, all its direct child elements becom
 - **flex-end** → items align to the end.
 - **center** → items align to the center
 - **baseline** → items align according to their text baselines.
+
+Q1. Create a nav bar using HTML and CSS - Project
