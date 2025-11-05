@@ -682,4 +682,147 @@ When you set `display: flex` on a container, all its direct child elements becom
 - **center** → items align to the center
 - **baseline** → items align according to their text baselines.
 
-Q1. Create a nav bar using HTML and CSS - Project
+## Day 5th Nov 2025
+
+- flex items try to fit into a single line — even if they overflow the container.
+- The flex-wrap property tells the container whether flex items should stay in one line or wrap onto multiple lines.
+```
+flex-wrap: nowrap | wrap | wrap-reverse;
+```
+
+### Property Values Explained
+**1. nowrap (Default)**
+- ➡️ All flex items will be on one single line.
+- If they overflow, they will just go outside the container.
+```
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+```
+
+**Behavior:**
+- Items will shrink to fit if possible.
+- If items are too wide, they overflow the container.
+- Common default behavior.
+
+**2. wrap**
+- ➡️ Flex items will wrap onto multiple lines — from top to bottom (in normal flow).
+```
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+**Behavior:**
+- If items don’t fit on one line, they automatically move to the next line.
+- Each new line acts as a new flex line.
+**Use case:** Great for responsive layouts where you want cards, boxes, or buttons to wrap automatically as screen size changes.
+
+**3. wrap-reverse**
+- ➡️ Works like wrap, but the wrapping direction is reversed (bottom to top).
+```
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+```
+
+**Behavior**:
+- Items wrap into multiple lines in reverse order — starting from the bottom of the container.
+
+**🧾 Summary Table**
+| Value | Description |
+|-------|-------------|
+|nowrap |Items stay on one line (default).|
+|wrap   | Items wrap to the next line (top → bottom).|
+|wrap-reverse | Items wrap in reverse order (bottom → top).|
+
+# Display Grid
+
+**Grid:** CSS Grid is a powerful layout system that allows you to create flexible, two-dimensional grids of elements on a web page. It offers a more intuitive and efficient way to structure complex layouts compared to traditional methods like floats or tables.
+
+**Key benefits:**
+-   **Responsive design:** Grid layouts adapt seamlessly to different screen sizes, making your website responsive and user-friendly across devices.
+-   **Precise control:** You have fine-grained control over the placement and sizing of grid items, enabling intricate and visually appealing layouts.
+-   **Flexibility:** Grid layout properties can be combined effectively to achieve a wide variety of design goals.
+-   **Semantic structure:** Encourages a more meaningful structure for your HTML content.
+
+1. **Container Properties:**
+
+-   **display: grid or display: inline-grid;:**
+    -   Transforms an element into a grid container, the parent element that holds the grid items.
+    -   grid is for block-level elements, while inline-grid allows inline elements to behave as grid containers.
+
+1. **Grid Lines and Tracks:**
+
+-   **grid-template-columns and grid-template-rows:**
+    -   Define the explicit sizing and number of grid tracks (columns and rows). You can specify values in pixels (px), percentages (%), or fractions (fr).
+    -   Example: 
+```
+    .grid-container { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: 200px auto; 
+    } 
+```
+(Creates three equal-width columns and two rows: a fixed-height first row and an auto-height second row)  
+
+-   **grid-auto-columns and grid-auto-rows:**
+    -   Determine the implicit (default) size of grid tracks when explicit values haven't been set for grid-template-columns or grid-template-rows.
+    -   Example: 
+```    
+.grid-container { 
+    display: grid; 
+    grid-auto-columns: minmax(200px, 1fr); 
+} 
+```
+(Sets a minimum width of 200px for columns and switches to a flexible fraction layout if there's enough space)
+
+1. **Grid Item Placement:**
+    - **grid-column-start, grid-column-end, grid-row-start, and grid-row-end:**
+        - Specify the grid lines on which a grid item should start and end, controlling its placement within the grid.
+        - (Places item1 starting at the first column and first row, spanning two columns)
+        - Example: 
+```    
+    .item1 { 
+        grid-column-start: 1; 
+        grid-row-start: 1; 
+        grid-column-end: span 2; 
+    } 
+```
+- **grid-column and grid-row (shorthand):**
+    - Combine grid-column-start and grid-row-start into a single property for simpler positioning.
+    - Example: 
+```
+    .item2 { 
+        grid: 2 / span 2; 
+    } 
+```
+(Places item2 starting at the second row and spanning two columns)
+1. **Grid Gaps:**
+    - **row-gap and column-gap:**
+        - Define the spacing between grid rows and columns, respectively.
+        - (Sets 20px spacing between rows and 10px spacing between columns)
+        - Example: 
+```
+.grid-container { 
+    display: grid;
+    row-gap: 20px;
+    column-gap: 10px;
+} 
+```
+   - **gap (shorthand):**
+        - Combines row-gap and column-gap into one property for convenience.
+        - (Sets a 15px gap between both rows and columns).
+        - Example: 
+```    
+    .grid-container { 
+        display: grid; 
+        gap: 15px; 
+    } 
+```
+
+## Project 1 - Student create a portfolio using HTML, CSS and JavaScript - (deadline - 15th Dec 2025)
+
+## Project 2 - Create a Project based on DOM Manipulation (Digital Clock) - (Deadline - 15th Dec 2025)

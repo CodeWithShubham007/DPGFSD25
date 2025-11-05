@@ -1,7 +1,42 @@
-.demo{
-    width: 150px;
-    height: 150px;
-    border: 1px solid red;
-    background-image: conic-gradient(from 45deg, red, green, blue);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*
+.parent{
     display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    } */
+    
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 1px solid red;
+}
+
+.demo{
+    width: 100%;
+    /* height: 30px; */
+    border: 1px solid blue;
+    
+}
+
+.demo1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.demo2{
+    height: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start:2 ;
+    grid-row-end: 4 ;
 }
