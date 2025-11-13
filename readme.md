@@ -683,7 +683,7 @@ When you set `display: flex` on a container, all its direct child elements becom
 - **baseline** → items align according to their text baselines.
 
 ## Day 5th Nov 2025
-
+### Display : Flex, flex-wrap : wrap | nowrap | wrap-reverse
 - flex items try to fit into a single line — even if they overflow the container.
 - The flex-wrap property tells the container whether flex items should stay in one line or wrap onto multiple lines.
 ```
@@ -822,6 +822,105 @@ flex-wrap: nowrap | wrap | wrap-reverse;
         gap: 15px; 
     } 
 ```
+## Day - 6th Nov 2025
+
+# Pseudo Selector
+In CSS, a pseudo-selector (often referred to as a pseudo-class or pseudo-element) is a keyword added to a selector that specifies a special state of the selected elements. Pseudo-selectors allow you to style elements based on their state or position in the document tree without needing to add additional classes or IDs to the HTML.
+
+**Two main type of Pseudo selector**
+
+**1. pseudo class:** Pseudo-classes are used to define the special states of an element.
+   + **:hover:** Styles an element when the mouse pointer is over it.
+   + **:focus:** Styles an element when it has focus (e.g., when an input field is selected).
+   + **:first-child:** Styles the first child of a parent element.
+   + **:last-child:** Styles the last child of a parent element.
+   + **:nth-child:** Styles the nth child of a parent element.
+   + **Ex:** :active, :checked, :disable, :empty, :enable, :fullscreen, :link,  
+- **Uses of Pseudo-Classes:** 
+  - Improve user experience by visually indicating element states (like hover or active buttons).​
+  - Differentiate the styling of links based on their visit state.
+  - Target forms and validation states (like :required, :invalid).
+  - Select elements based on their position in the HTML (like :first-child).
+
+- **Drawbacks of Pseudo-Classes**
+    - Cannot be used to target non-existing states or styles that require DOM manipulation.
+    - Some pseudo-classes may not be supported in old browsers.​
+
+**2. pseudo element:** Pseudo-elements are used to style specific parts of an element. 
++ **::before:** Inserts content before the content of an element.
++ **::after:** Inserts content after the content of an element.
++ **::first-letter:** Styles the first letter of a block element.
++ **::first-line:** Styles the first line of a block element.
++ **::marker** — targets the marker box of a list item
+
+- **Uses of Pseudo-Elements**
+  - Create decorative effects or icons using ::before and ::after without adding extra HTML.​
+  - Style only the first line or first letter of a paragraph for typographic effects.​
+  - Style selection highlights (::selection) or list bullet markers (::marker).
+
+- **Drawbacks of Pseudo-Elements**
+    - They only operate on specific parts of elements; not every visual effect is possible.
+    - Limited interactivity compared to real DOM elements — can’t be directly manipulated by JavaScript.​
+    - Some pseudo-elements have browser compatibility issues or subtle differences in how they're rendered.
+
+# Transition in CSS
+**Definition:** Transitions are a powerful CSS feature that allows you to smoothly animate changes between different style values for an element. This creates a more visually appealing and user-friendly experience when elements on your web page change states (e.g., hovering over a button, clicking a link, changing page sections).
+
++ **CSS Transition Properties**
+**1. transition-property:** Specifies the name of the CSS property the transition effect is for.
+**2. transition-duration:** Defines how long the transition takes to complete.
+**3. transition-timing-function:** Specifies the speed curve of the transition effect. This property allows for customization of the acceleration and deceleration of the transition.
+    1. ease (defalut): starts slow, then fast, then ends slow
+    2. linear
+    3. ease-in
+    4. ease-out
+    5. ease-in-out
+    6. cubic-bezier(n,n,n,n)
+**4. transition-delay:** Specifies a delay before the transition starts.
+**You can combine all the transition properties into a single shorthand property called transition**
+1. transition : property duration timing-function delay;
+
+# Animation in CSS
+**Definition:** CSS animations allow you to animate the transition of CSS properties over time. They can be used to create smooth transitions, keyframe animations, and more.
+
+**Properties of CSS Animation:**
+1. Keyframe: Defines the animation's intermediate steps.
+```
+@keyframes animationName {
+    0% { 
+        /* Initial state */ 
+    }
+    50% { 
+        /* Intermediate state */ 
+    }
+    100% { 
+        /* Final state */ 
+    }
+}
+```
+
+**2. Animation Name:** Specifies the name of the @keyframes animation to apply to the element.
+
+**3. Animation Duration:** Specifies the duration of the animation.
+
+**4. animation-timing-function:** Specifies the speed curve of the animation.
+   1. linear
+   2. ease
+   3. ease-in
+   4. ease-out
+   5. ease-in-out
+   6. cubic-bezier(n,n,n,n).
+
+**5. Animation-delay:** Specifies a delay before the animation starts.
+**6. animation-iteration-count:** Specifies the number of times the animation should be played.
+- Possible values: infinite, any number.
+**7. animation-direction:** Specifies whether the animation should play in reverse on alternate cycles.
+- Possible Value: normal, reverse, alternate, alternate-reverse
+**8. animation-fill-mode:** Specifies how a CSS animation should apply styles to its target before and after it is executing.
+- Possible values: none, forwards, backwards, both.
+**9. animation-play-state:** Specifies whether the animation is running or paused.
+- Possible values: running, paused.
+
 
 ## Project 1 - Student create a portfolio using HTML, CSS and JavaScript - (deadline - 15th Dec 2025)
 

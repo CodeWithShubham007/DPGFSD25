@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .demo{
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+    animation: shape 4s infinite;
+    animation-name: shape ;
+}
+
+.demo1{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    animation: shape 6s infinite;
+    animation-name: shape;
+    animation-delay: 5s;
+}
+
+
+@keyframes shape{
+    0%, 100%{
+        background-color: red;
+    }
+    25%{
+        background-color: yellow;
+        border-radius: 50%;
+    }
+    50%{
+        background-color: black;
+        border-radius: 0%;
+    }75%{
+        background-color: blue;
+        border-radius: 50%;
+    }
+} */
+
+
+
+
+
+/* 
+mobile -  320 px - 480px
+tab & iPad - 481px - 768px
+laptop - 769px - 1024px
+Desktop -  1025px and 1280px
+big screen - 1280px and above
+*/
+
+.parent{
+    width: 100%;
+    height: 50vh;
+    /* border: 1px solid black; */
+    /* overflow-x: hidden; */
+    display: flex;
+    justify-content:space-between;   
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.child{
+    width: 17%;
+    height: 40%;
+    border: 4px double red;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px){
+    .parent{
+        display: block;
+    }
+    .child{
+        /* background-color: red; */
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .child{
+        width: 45%;
+        margin-bottom: 10px;
+    }
+}

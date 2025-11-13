@@ -1,0 +1,211 @@
+/* p:hover{
+    color: red;
+    cursor: pointer;
+} */
+
+/* .submit{
+    width: 100px;
+    height: 10vh;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.submit:hover{
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+} */
+
+/* first child */
+
+
+/* .unordered li:nth-child(2n + 1){
+    color: red;
+}
+.unordered li:first-child {
+    color: red;
+}
+
+.unordered li:last-child {
+    color: cyan;
+} */
+
+/* p::first-letter{
+    color: red;
+    font-size: 30px;
+}
+
+p::first-line{
+    color: green;
+} */
+
+/* h1::before{
+    content: "H";
+    color: red;
+}
+
+h1::after{
+    content: "";
+    color: red;
+    width: 100px;
+    height: 10px;
+    border: 1px solid black;
+} */
+
+
+/* .box{ */
+    /* width: 200px; */
+    /* height: 200px; */
+    /* border: 1px solid black; */
+    /* background-color: yellow; */
+    /* transition-property: background-color; */
+    /* transition-duration: .6s; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-delay: 1s; */
+    /* transition: background-color .6s ease-in-out 1s; */
+/* } */
+
+/* .box:hover{ */
+    /* background-color: black; */
+    /* width:300px;
+    height: 300px;
+    border-radius: 50%;
+    rotate: 45deg; */
+/* } */
+
+/* Animation */
+/* .box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: rgb(88, 230, 171);
+    animation-name: changePosition ;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+}
+
+
+@keyframes changePosition {
+    0%, 100%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        right: 0;
+    }
+    50%{
+        bottom: 0;
+        right: 0;
+    }
+    75%{
+        bottom: 0;
+        left: 0;
+    }
+} */
+
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: rgb(88, 230, 171);
+  animation-name: changePosition;
+  animation-duration: 10s; /* make it slower to see movement */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* so it keeps looping */
+  position: absolute;
+}
+
+@keyframes changePosition {
+  0%,
+  100% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    /* right: 0px; */
+    left: calc(98% - 200px);
+    border-radius: 50%;
+    background-color: pink;
+  }
+  50% {
+    top: calc(100% - 200px);
+    left: calc(98% - 200px);
+  }
+  75% {
+    top: calc(100% - 200px);
+    left: 0;
+  }
+}
+
+.demo{
+    width: 10%;
+    height: 10vh;
+   margin: auto;
+   border: 1px solid black;
+   font-size: 30px;
+   text-align: center;
+    line-height: 10vh;
+}
+
+
+
+.demo::before{
+   content: "";
+   width: 100%;
+   height: 10px;
+    background-color: black;
+    display: block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 👇 create the underline (hidden initially) */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background: #00b894; /* underline color */
+  transition: width 0.4s ease;
+}
+
+/* 👇 animate underline on hover */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* optional: change text color on hover */
+nav ul li a:hover {
+  color: #00b894;
+}
