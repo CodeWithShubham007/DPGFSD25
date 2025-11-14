@@ -122,15 +122,23 @@ if(num % 3 === 0){
 // }
 
 
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
-console.log(5);
-console.log(6);
-console.log(7);
-console.log(8);
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
+// console.log(5);
+// console.log(6);
+// console.log(7);
+// console.log(8);
 
+for (let i = 11; i <= 30; i++) {
+    // console.log(i);    
+}
 
+let data = 4321
+let data1 = data % 10
+console.log(parseInt(data / 10));
 
+// console.log(data % 10);
 
+1
