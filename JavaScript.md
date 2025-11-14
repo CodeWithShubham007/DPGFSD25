@@ -109,9 +109,9 @@ let getValue = variable;
   - Greater or equal (>=)
   - Less or equal (<=)
 - **Logical Operators:**
-  - Logical AND &&
-  - Logical NOT !
-  - Logical OR ||
+  - Logical AND && - id anyone id false result false
+  - Logical NOT ! - reverse your output
+  - Logical OR || - if any one is true result is true
 - **Unary Operators:**
   - Increment  a++
   - Decrement  a--
@@ -121,6 +121,34 @@ let getValue = variable;
 - **String Operators:**
   - Concatenation +
   - Append string +=
+
+
+#### Data Type in JavaScript
+ **Interview Question**
+**Two Type of Data Type in JavaScript**
+**1. Primitive Data Type** - Store one value at a time.
+- **Number** - A numerical value, including integers and floating-point numbers.
+- **String** - A sequence of characters enclosed in single or double quotes.
+- **Boolean** - A true/false value.
+- **Null** - A special value that represents no value or empty value.
+- **Undefine** - A variable that has been declared but not assigned a value.
+- **Symbol** - A unique value that is used as an identifier for object properties.
+**2. Non-Primitive Data Type**
+- Non-Primitive Data Type (Array, Object and it’s Method)
+  - **Object:** 
+    - A javaScript object is an entity having state and behavior (properties and method).
+    - JavaScript Object is a collection of key and value pairs.
+    - JavaScript is an Object based programming language, Everything is an Object in JavaScript.
+  - **Array:**  
+    - JavaScript array is an object that represents a collection of similar types of elements.
+    - Arrays are used to store multiple values in a single varianle. Each item in an array has a number attached to it, called a numeric index, that allows us to excess the elements.
+    - **String:** 
+      - The JavaScript string is an object that represents a sequence of characters.
+      - In JavaScript, a string is a sequence of characters enclosed in single quotes, double quotes, or backticks. String in JavaScript are immutable, Which means that once a string is created, it cannot be changed.
+      - There are Two ways to create String in JavaScript
+        - By String Literal - The string literal is created with double quotes or single quotes.
+        - The syntax of creating a string object using a new keyword. New Keyword is used to create an instance of String.
+
 
 #### Conditional Statements
 **Conditional Statements** - Conditional statements are used in programming to execute certain code blocks only if a specified condition is met. In JavaScript, there are three main types of conditional statements: if statements, if...else statements, and switch statements.
@@ -162,31 +190,106 @@ switch (expression) {
 
 ```
 
-#### Data Type in JavaScript
- 
-**Two Type of Data Type in JavaScript**
-**1. Primitive Data Type**
-- **Number** - A numerical value, including integers and floating-point numbers.
-- **String** - A sequence of characters enclosed in single or double quotes.
-- **Boolean** - A true/false value.
-- **Null** - A special value that represents no value or empty value.
-- **Undefine** - A variable that has been declared but not assigned a value.
-- **Symbol** - A unique value that is used as an identifier for object properties.
-**2. Non-Primitive Data Type**
-- Non-Primitive Data Type (Array, Object and it’s Method)
-  - **Object:** 
-    - A javaScript object is an entity having state and behavior (properties and method).
-    - JavaScript Object is a collection of key and value pairs.
-    - JavaScript is an Object based programming language, Everything is an Object in JavaScript.
-  - **Array:**  
-    - JavaScript array is an object that represents a collection of similar types of elements.
-    - Arrays are used to store multiple values in a single varianle. Each item in an array has a number attached to it, called a numeric index, that allows us to excess the elements.
-    - **String:** 
-      - The JavaScript string is an object that represents a sequence of characters.
-      - In JavaScript, a string is a sequence of characters enclosed in single quotes, double quotes, or backticks. String in JavaScript are immutable, Which means that once a string is created, it cannot be changed.
-      - There are Two ways to create String in JavaScript
-        - By String Literal - The string literal is created with double quotes or single quotes.
-        - The syntax of creating a string object using a new keyword. New Keyword is used to create an instance of String.
+#### JavaScript Loops-
+**Loop** - Javascript loop, is used to iterate the piece of code using for, while, do While, or for-in loop. It makes the code compact. It is mostly used in JavaScript Arrays.
 
+**There are five types of loops in JavaScript:**
+**1. For loop** - The JavaScript for loop iterates the elements for the fixed number of times. It should be used if the number of iterations is known.
+``` 
+for(loop starting condition ; loop Condition ; increment/ decrement){
+    // Code We want to execute.
+}
+```
 
+**2. While Loop** - The JavaScript While Loop iterates the elements for an infinite number of times. It should be used if the number of iterations is not known.
+```
+while(Condition){
+    //Code we want to execute.
+}
+```
+
+**3. Do While loop** - The JavaScript do while loop iterates the elements for an infinite number of times like while loop. But, code is executed at least once whether the condition is true or false.
+```
+do{
+    // Code we want to execute
+} while(condition)
+```
+
+**4. For in Loop** - The JavaScript for in loop is used to iterate the properties of an object.
+```
+for(let key of Object){
+    // write the code here
+}
+```
+
+**5. For of loop** - The JavaScript for of loop is used to iterate the Object like ( Array, Set, Map, String etc.)
+```
+for (element of iterable) {
+    // Write the logic.
+}
+```
+
+#### Function in JavaScript
+Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure, a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
+```
+Function nameOfFunction(parameter1, parameter2….. parameterN){
+    // write the code as you want.
+}
+```
+
+**Type of Function:**
+**1. Function Declaration** - Function Declaration is the traditional way to define a function. It is somehow similar to the way we define a function in other programming languages. We start declaring using the keyword “function”. Then we write the function name and the parameters.
+```
+function Sum(a, b){
+  console.log(a+b);
+}
+// Calling Function
+Sum(5, 10)
+```
+
+**2. Function Expression** - Function Expression is another way to define a function in JavaScript. Here we define a function using a variable and store the returned value in that variable.
+```
+const Sum = function(a, b){
+  console.log(a+b);
+}
+// Calling Function
+Sum(5, 10)
+```
+
+**3. Arrow Function** - Arrow functions have been introduced in the ES6 version of JavaScript. It is used to shorten the code. Here we do not use the “function” keyword and use the arrow symbol.
+```
+// Array Function
+const Multi = (a, b) => a * b;
+const result = Multi(10, 20);
+console.log(result);
+```
+
+**4. Call Back Function**- A callback function is a function that is passed as an argument to another function and is called when that function completes its task. Callback functions are commonly used in asynchronous programming to handle the results of a task that may take some time to complete.
+```
+// Call Back Function
+function calculate(n1, n2, callback){
+  const result = n1 + n2;
+  callback(result);
+}
+function printResult(output){
+  console.log(`The result is: ${output}`);
+}
+calculate(10, 25, printResult)
+```
+
+**5. Higher-order functions-** These are functions that take one or more functions as arguments or return a function as their result.
+```
+// Higher Order Function
+function random(){
+    return Math.floor(Math.random() * 100);
+ }
+  function player(name, id){
+    return `${name} and ${id()}`
+ }
+  const p1 = player("Shubham", random);
+console.log(p1);
+// Output - Shubham and Random Numbe
+```
+
+**6. Anonymous functions**- These are functions that do not have a name and are typically used as arguments for other functions or as immediately invoked function expressions (IIFEs).
 
