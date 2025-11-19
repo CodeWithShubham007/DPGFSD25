@@ -293,3 +293,107 @@ console.log(p1);
 
 **6. Anonymous functions**- These are functions that do not have a name and are typically used as arguments for other functions or as immediately invoked function expressions (IIFEs).
 
+**7. IIFE**
+
+<!-- Hoisting, closure and  -->
+#### Hoisting and Closure
+  
+- **Hoisting** – Hoisting is a term used in JavaScript that describes how variable and function declarations are processed during the compilation phase. Specifically, it refers to the way that declarations are moved to the top of their respective scopes, allowing you to use them before they are actually declared in the code.
+
+**Here Some important points to understand about hoisting in JavaScript -**
+
+- Declarations are processed before code execution: JavaScript engines process variable and function declarations before executing any code. This means that declarations are processed during the compilation phase, which occurs before the execution phase.
+- Variable declarations are hoisted but not their assignments: When you declare a variable using the var keyword, the variable declaration is hoisted to the top of its scope. However, the assignment of the variable is not hoisted. This means that you can use the variable before it's assigned a value, but you will get undefined if you try to access its value.
+- Function declarations are hoisted entirely: When you declare a function using the function keyword, the entire function declaration is hoisted to the top of its scope. This means that you can call the function before it's declared in the code.
+
+- **Closure In JavaScript**
+- **Closure** – A closure can be defined as a JavaScript feature in which the inner function has access to the outer function variable. In JavaScript, every time a closure is created with the creation of a function.
+- **The closure has three scope chains listed as follows:**
+- Access to its own scope.
+- Access to the variables of the outer function.
+- Access to the global variables.
+
+#### local storage and session storage
+- **Local Storage** – Local storage is a way for web applications to store key-value pairs locally within a user's browser. It provides a simple and easy-to-use API for web developers to store and retrieve data.
+- **Some of the Key Points of Local Storage**
+- Local storage is specific to a particular domain, meaning that data stored by one domain cannot be accessed by another domain.
+- Local storage is persistent and will remain available even after the user closes their browser and returns to the web application.
+- Local storage can only store strings, so any other data types will need to be converted before being stored.
+- Local storage has a maximum size limit of around 5-10MB, depending on the browser.
+- **Important Method of Local Storage**
+  - **setItem:** This method is used to store a key-value pair in local storage. The key parameter is a string that represents the key for the item, while the value parameter can be any data type that can be serialized to a string.
+
+```
+localStorage.setItem("username", "BCA FSD");
+```
+
+- **getItem:** This method is used to retrieve the value associated with a given key in local storage. The key parameter is a string that represents the key for the item.
+```
+const username = localStorage.getItem("username");
+console.log(username); // outputs "PrepBytes"
+```
+
+- **removeItem:** removeItem(key): This method is used to remove a key-value pair from local storage. The key parameter is a string that represents the key for the item.
+
+```
+localStorage.removeItem("username");
+```
+
+- **Clear:** This method is used to remove all key-value pairs from local storage.
+```
+localStorage.clear();
+```
+
+- **Session Storage:** Session storage is a mechanism that allows you to store key/value pairs in the user's web browser, for the duration of a session. A session is typically defined as the time between when a user opens a web page and when they close it. When the user closes the browser, all data stored in session storage is deleted.
+
+- **setItem(key, value):** This method sets a key-value pair in the session storage object. The key parameter is the name of the key, and the value parameter is the value associated with the key. If the key already exists, its value will be updated.
+- **getItem(key):** This method retrieves the value associated with a given key in the session storage object. The key parameter is the name of the key.
+- **removeItem(key):** This method removes the key-value pair associated with a given key from the session storage object. The key parameter is the name of the key.
+- **clear():** This method removes all key-value pairs from the session storage object.
+
+```
+
+
+const companyName = ["PrepBytes", "CollegeDekho", "GirnarSoft"];
+// store the data in session storage using setItem
+sessionStorage.setItem("company", companyName);
+// get the data from session storage using getItem
+let data = localStorage.getItem("company");
+console.log(data);
+// Output: "PrepBytes", "CollegeDekho", "GirnarSoft"
+sessionStorage.removeItem('company');
+// Output: this data remove from session storage
+sessionStorage.clear();
+//Output: remove all data from session storage
+```
+
+<!-- different type of error -->
+#### Error in JavaScript
+
+- **Error** – In programming, an error is an unexpected event or condition that prevents the program from executing correctly. In JavaScript, errors can occur due to syntax errors, runtime errors, and logic errors.
+
+**There are Four type of JavaScript errors**
+1. **Syntax Error** – A syntax error in JavaScript occurs when the code is written in an incorrect format or structure. This means that there is an error in the way that the code is written and the JavaScript interpreter cannot understand it.
+```
+let name = 'PrepBytes'
+console.log(name+);
+```
+
+2. **Reference Error** – A reference error is a type of error that occurs in JavaScript when you try to reference a variable or function that has not been defined or is not in scope.
+```
+let subject = "JavaScript";
+console.log(course);
+```
+
+3. **Type Error** – In JavaScript, a type error occurs when a value is of the wrong type and cannot be operated on or used in a certain context. For example, if you try to perform a mathematical operation on a string or access a property on an undefined variable, a type error will be thrown.
+```
+let num = 1;
+let str = num.toUpperCase();
+console.log(str)
+```
+
+4. **Range Error** – A Range Error is a type of error that occurs in JavaScript when a value is not within an expected range. This error typically occurs when attempting to perform an operation that requires a value within a specific range, such as accessing an array index that does not exist, or passing a value that is outside of the acceptable range for a function argument.
+```
+const arr = [1,2,3,4,5];
+console.log(arr[10]);
+```

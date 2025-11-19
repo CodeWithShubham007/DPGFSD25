@@ -135,9 +135,9 @@ for (let i = 11; i <= 30; i++) {
     // console.log(i);    
 }
 
-let data = 4321
-let data1 = data % 10
-console.log(parseInt(data / 10));
+// let data = 4321
+// let data1 = data % 10
+// console.log(parseInt(data / 10));
 
 // console.log(data % 10);
 
