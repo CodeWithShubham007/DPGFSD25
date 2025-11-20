@@ -1,0 +1,13 @@
+
+.child{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+     border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+}

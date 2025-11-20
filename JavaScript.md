@@ -306,6 +306,8 @@ console.log(p1);
 - Variable declarations are hoisted but not their assignments: When you declare a variable using the var keyword, the variable declaration is hoisted to the top of its scope. However, the assignment of the variable is not hoisted. This means that you can use the variable before it's assigned a value, but you will get undefined if you try to access its value.
 - Function declarations are hoisted entirely: When you declare a function using the function keyword, the entire function declaration is hoisted to the top of its scope. This means that you can call the function before it's declared in the code.
 
+### Day 20th Nov
+
 - **Closure In JavaScript**
 - **Closure** – A closure can be defined as a JavaScript feature in which the inner function has access to the outer function variable. In JavaScript, every time a closure is created with the creation of a function.
 - **The closure has three scope chains listed as follows:**
@@ -396,4 +398,136 @@ console.log(str)
 ```
 const arr = [1,2,3,4,5];
 console.log(arr[10]);
+```
+
+#### Array in JavaScript
+**Array:**  
+- JavaScript array is an object that represents a collection of similar types of elements.
+- Arrays are used to store multiple values in a single varianle. Each item in an array has a number attached to it, called a numeric index, that allows us to excess the elements.
+
+**There are three ways to create Array -** 
+- By Array literal:
+```
+const array = [10, 20, 30, 40]
+console.log(array);
+```
+- By creating instance of Array directly (using New keyword)
+```
+const ArrName = new Array();
+ArrName[0] - 'Shubham';
+ArrName[1] - 'Kumar'
+```
+- By using an Array Constructor (using new keyword).
+```
+const Emp = new Array('Shubham', 'Kumar', 'Singh');
+console.log(Emp);
+```
+
+- **Some Array Method:**
+  - **concat():** It returns a new array object that contains two or more merged arrays.
+```
+const a = [10, 20];
+const b = [30, 40];
+const c = [50, 60];
+
+const output = a.concat(b, c);
+console.log(output); // [10, 20, 30, 40, 50, 60]
+```
+
+- **filter():** It returns the new array containing the elements that pass the provided function conditions.
+```
+const numbers = [5, 12, 20, 7];
+const result = numbers.filter((num) => num > 10);
+console.log(result); // [12, 20]
+```
+
+- **fill():** It fills elements into an array with static values.
+```
+const arr = [1, 2, 3, 4];
+arr.fill(0);
+console.log(arr); // [0, 0, 0, 0]
+```
+
+- **push():** It adds one or more elements to the end of an array.
+```
+const fruits = ["apple", "mango"];
+fruits.push("banana");
+console.log(fruits); // ["apple", "mango", "banana"]
+```
+- **pop():** It removes and returns the last element of an array.
+```
+const fruits = ["apple", "mango", "banana"];
+const lastFruit = fruits.pop();
+console.log(lastFruit);   // "banana"
+console.log(fruits);      // ["apple", "mango"]
+```
+
+- **reverse():** It reverses the elements of a given array.
+```
+const arr = [1, 2, 3, 4];
+arr.reverse();
+console.log(arr); // [4, 3, 2, 1]
+```
+- **map():** It calls the specified function for every array element and returns the new array
+```
+array.map((item)=> {
+    console.log(item);
+    // Output - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+})
+```
+- **reduce:** It executes a provided function for each value from left to right and reduces the array to a single value.
+```
+let sumrOfArray = array.reduce((prevValue, currentValue) => {
+    return prevValue + currentValue
+},0)
+console.log(sumrOfArray);
+```
+
+#### Object in JavaScript
+- **Object:** A javaScript object is an entity having state and behavior (properties and method).
+- JavaScript Object is a collection of key and value pairs.
+- JavaScript is an Object based programming language, Everything is an Object in JavaScript.
+- **Object Method:**
+  - **Object.assign():** This method is used to copy enumerable and own properties from a source object to a target object
+```
+const obj1 = { name: "BCA FSD" };
+const obj2 = { age: 25 };
+const result = Object.assign({}, obj1, obj2);
+console.log(result);
+// { name: "BCA FSD", age: 25 }
+```
+  - **Object.create():** This method is used to create a new object with the specified prototype object and properties.
+```
+const parent = {
+  greet() {
+    console.log("Hello!");
+  }
+};
+const child = Object.create(parent);
+child.greet(); // Hello!
+```
+  - **Object.entries():** This method returns an array with arrays of the key, value pairs.
+```
+const person = { name: "BCA FSD", age: 25 };
+const result = Object.entries(person);
+console.log(result);
+// [ ["name", "BCA FSD"], ["age", 25] ]
+```
+  - **Object.is():** This method determines whether two values are the same value.
+```
+console.log(Object.is(5, 5));       // true
+console.log(Object.is(0, -0));      // false
+console.log(Object.is(NaN, NaN));   // true
+```
+  - **Object.keys():** This method returns an array of a given object's own property names.
+```
+const car = { brand: "Honda", model: "City" };
+console.log(Object.keys(car));
+// ["brand", "model"]
+```
+  - **Object.values():** This method returns an array of values.
+```
+const car = { brand: "Honda", model: "City" };
+console.log(Object.values(car));
+// ["Honda", "City"]
 ```
