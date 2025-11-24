@@ -65,7 +65,7 @@
 
 
 // What is Map, filter and reduce
-const arr = [1,2,3,4,5,6]
+// const arr = [1,2,3,4,5,6]
 
 // arr.map((index)=>{
 //     console.log(index);
@@ -79,7 +79,7 @@ console.log(arr);
 
 // reduce
 
-let sumrOfArray = arr.reduce((prevValue, currentValue) => {
-    return prevValue - currentValue
-},0)
-console.log(sumrOfArray);
+// let sumrOfArray = arr.reduce((prevValue, currentValue) => {
+//     return prevValue - currentValue
+// },0)
+// console.log(sumrOfArray);

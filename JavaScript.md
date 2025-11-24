@@ -483,6 +483,8 @@ let sumrOfArray = array.reduce((prevValue, currentValue) => {
 console.log(sumrOfArray);
 ```
 
+### Day 24th Nov
+
 #### Object in JavaScript
 - **Object:** A javaScript object is an entity having state and behavior (properties and method).
 - JavaScript Object is a collection of key and value pairs.
@@ -530,4 +532,113 @@ console.log(Object.keys(car));
 const car = { brand: "Honda", model: "City" };
 console.log(Object.values(car));
 // ["Honda", "City"]
+```
+
+#### DOM - Document Object Model
+**DOM** - The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. 
+
+**DOM (Document Object Model) has some methods.**
+1. **getElementById()** - getElementById is a method in the JavaScript Document Object Model (DOM) that is used to select and return a reference to a single element in the HTML document that matches a specific ID attribute.
+```
+document.getElementById("html id");
+let idValue = document.getElementById('Pass id here');
+
+```
+
+2. **getElementsByClassName()** - getElementsByClassName is a method in the JavaScript Document Object Model (DOM) that is used to select and return a collection of all the elements in an HTML document that match a specific class name. 
+```
+document.getElementsByClassName('HTML Class Name');
+const classValue = document.getElementsByClassName('Pass Class Name Here');
+```
+
+3. **querySelector()** - querySelector is a method in the JavaScript Document Object Model (DOM) that allows you to select a single element in an HTML document using a CSS selector. It returns the first element that matches the specified selector.
+```
+document.querySelector('HTML Tag name');
+document.querySelector('HTML ID name with Symbol #')
+document.querySelector('HTML class name with Symbol .')
+let idVal = document.querySelector('#item_demo')
+```
+4. **querySelectorAll()** - querySelectorAll is a method in the JavaScript Document Object Model (DOM) that allows you to select one or more elements in an HTML document using a CSS selector. It returns a NodeList object containing all the elements that match the specified selector.
+```
+document.querySelectorAll('HTML Tag name');
+document.querySelectorAll('HTML class name with Symbol .')
+let classVal = document.querySelector('.item_demo')
+let tagVal = document.querySelector('h1')
+```
+5. **getElementsByTagName()** – The getElementsByTagName method returns a collection of all elements with a specified tag name. It returns an HTMLcollection.
+```
+document.getElementsByTagName('Pass the HTML tag')
+let h1Val = document.getElementsByTagName('h1')
+```
+6. **appendChild()**: Previously we created an element, now we will add two elements to our list of links using appendChild.
+```
+// List assign to a variable
+var myNewListItem = document.createElement('li')
+myLinkList.appendChild(myNewListItem);
+// List assign to Body tag
+var myNewProd = document.createElement('div');
+body.appendChild(myNewProd)
+```
+
+7. **innerHTML**:The innerHTML property can be used to write the dynamic html on the html document. It is mostly used to add or append any variable or HTML elements.
+We can assign a html tag to any element.
+```
+// Assign variable to html elements
+let val = "PrepBytes"
+let idVal = document.getElementById('get');
+idVal.innerHTML = val;
+// Assign html element to html elements
+let idVal = document.getElementById('get');
+idVal.innerHTML = `<h1>PrepBytes</h1>`;
+```
+8. **innerText**: The innerText property can be used to write the dynamic html on the html document. This is similar to innerHTML.
+We can assign some html tags dynamically by using innerText.
+```
+// assign some text to html tag by using innerText
+let idVal = document.getElementById('get');
+idVal.innerText = "CollegeDekho";
+
+// innerText return content of html tag
+let idVal = document.getElementById('get');
+let content = idVal.innerText;
+console.log(content);
+```
+9. **setAttributes**: A useful method to replace values in the attribute. Assigning a new value to an existing attribute is done using setAttribute. Suppose we have an attribute “abc” containing the value “Best.”
+```
+var myLinkFive = document.getElementById("HTML ID");
+myLinkFive.setAttribute('abc', 'Awesome'); 
+```
+
+#### Event in JavaScript
+1. **click**: Fired when a user clicks on an element.
+```
+document.getElementById("btn").addEventListener("click", function() {
+  console.log("Button Clicked");
+});
+```
+2. **mousemove**: Fired when the mouse pointer moves over an element.
+```
+document.addEventListener("mousemove", (e) => {
+  console.log(e.clientX, e.clientY);
+});
+```
+
+3. **mouseenter**: Fired when mouse enters an element (no bubbling).
+```
+document.getElementById("box").addEventListener("mouseenter", () => {
+  console.log("Mouse Entered");
+});
+```
+4. **mouseleave**: Fired when mouse leaves an element.
+```
+document.getElementById("box").addEventListener("mouseleave", () => {
+  console.log("Mouse Left");
+});
+```
+
+5. **resize**: Triggered when window size changes.
+```
+window.addEventListener("resize", () => {
+  console.log("Window Resized");
+});
 ```
